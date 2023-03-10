@@ -1,0 +1,9 @@
+pandas 
+numpy
+matplotlib
+seaborn
+pymongo==4.2.0
+python-dotenv==0.21.0
+scikit-learn
+sklearn
+-e .
