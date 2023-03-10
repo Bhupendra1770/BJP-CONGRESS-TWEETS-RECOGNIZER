@@ -23,7 +23,7 @@ class DataIngestion:
         try:
             logging.info(f"Exporting collection data as pandas dataframe")
             df:pd.DataFrame  = pd.read_csv(self.data_ingestion_config.DATA_FILE_PATH)
-
+            df.drop("Unnamed: 0",axis=1,inplace=True)
             logging.info("Save data in feature store")
 
 
