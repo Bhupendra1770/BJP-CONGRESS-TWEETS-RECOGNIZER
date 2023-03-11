@@ -12,7 +12,6 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 from Tweets_classifier.connection import TARGET_COLUMN
-from Tweets_classifier.connection import PARTY_COLUMN
 
 
 
@@ -34,6 +33,7 @@ class DataTransformation:
         try:
             #reading training and testing file
             df = pd.read_csv(self.data_ingestion_artifact.feature_store_file_path)
+            df = df[0:100]
             logging.info("dropping some unwanted columns")
 
             if 'Unnamed: 0.1' in df.columns:
