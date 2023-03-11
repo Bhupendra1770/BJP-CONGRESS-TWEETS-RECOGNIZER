@@ -14,4 +14,3 @@ class DataTransformationArtifact:
     transform_object_path:str
     transformed_feature_path:str
     transformed_target_path:str
-    transformed_party_path:str

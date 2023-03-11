@@ -106,7 +106,6 @@ class DataTransformation:
 
             logging.info("extracting our both target columns")
             target = df['target'].values
-            party  = df['Party'].values
 
 
             logging.info("saving all numpy array and object")
@@ -116,8 +115,6 @@ class DataTransformation:
             utils.save_numpy_array_data(file_path=self.data_transformation_config.transformed_target_path,
                                         array=target)
 
-            utils.save_numpy_array_data(file_path=self.data_transformation_config.transformed_party_path,
-                                        array=party)
 
             utils.save_object(file_path=self.data_transformation_config.transform_object_path,
              obj=cv)
@@ -129,7 +126,6 @@ class DataTransformation:
                 transform_object_path=self.data_transformation_config.transform_object_path,
                 transformed_feature_path = self.data_transformation_config.transformed_feature_path,
                 transformed_target_path = self.data_transformation_config.transformed_target_path,
-                transformed_party_path = self.data_transformation_config.transformed_party_path,
 
             )
 

@@ -16,4 +16,3 @@ mongo_client = pymongo.MongoClient(env_var.mongo_db_url)
 print("read it")
 
 TARGET_COLUMN = "target"
-PARTY_COLUMN = 'Party'
