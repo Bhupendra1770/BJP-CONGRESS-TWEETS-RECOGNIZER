@@ -33,7 +33,6 @@ class DataTransformation:
         try:
             #reading training and testing file
             df = pd.read_csv(self.data_ingestion_artifact.feature_store_file_path)
-            df = df[0:100]
             logging.info("dropping some unwanted columns")
 
             if 'Unnamed: 0.1' in df.columns:
@@ -101,7 +100,7 @@ class DataTransformation:
 
 
             logging.info("converting transformed tweets to vector with the help of countvectorizer")
-            cv = CountVectorizer(max_features=20000)
+            cv = CountVectorizer(max_features=14070)
             feature = cv.fit_transform(df['transformed_tweets']).toarray()
 
             logging.info("extracting our both target columns")
