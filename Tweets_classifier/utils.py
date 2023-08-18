@@ -8,7 +8,7 @@ from Tweets_classifier.logger import logging
 from Tweets_classifier.exception import SensorException
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-
+import dill
 
 ps = PorterStemmer()
 
